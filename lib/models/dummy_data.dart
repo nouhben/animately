@@ -2,6 +2,17 @@ import 'package:flutter/material.dart' show Color;
 
 import 'course.dart';
 
+final List<Course> courses = [
+  Course(
+    title: "Animations in SwiftUI",
+  ),
+  Course(
+    title: "Animations in Flutter",
+    iconSrc: "assets/icons/code.svg",
+    color: const Color(0xFF80A4FF),
+  ),
+];
+
 final List<Course> recentCourses = [
   Course(title: "State Machine"),
   Course(
