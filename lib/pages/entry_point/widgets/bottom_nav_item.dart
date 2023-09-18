@@ -26,8 +26,8 @@ class BottomNavigationItem extends StatelessWidget {
         children: [
           AnimatedBar(isActive: navBar == selectedNav),
           SizedBox(
-            height: 36,
-            width: 36,
+            height: 36.0,
+            width: 36.0,
             child: Opacity(
               opacity: selectedNav == navBar ? 1.0 : 0.5,
               child: RiveAnimation.asset(
