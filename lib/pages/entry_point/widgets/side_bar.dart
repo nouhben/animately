@@ -4,7 +4,6 @@ import 'package:animately/pages/entry_point/widgets/info_card.dart';
 import 'package:animately/pages/entry_point/widgets/side_menu.dart';
 import 'package:animately/utils/rive_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:rive/rive.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({super.key});

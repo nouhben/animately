@@ -22,7 +22,7 @@ class AnimatedBtn extends StatelessWidget {
         child: Stack(
           children: [
             RiveAnimation.asset(
-              'assets/RiveAssets/button.riv',
+              'assets/animated/button.riv',
               controllers: [_buttonRiveAnimationController],
             ),
             Positioned.fill(
@@ -32,6 +32,7 @@ class AnimatedBtn extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Icon(CupertinoIcons.arrow_right),
+                  const SizedBox(width: 8),
                   Text(
                     'Start the course,',
                     style: Theme.of(context).textTheme.labelLarge,

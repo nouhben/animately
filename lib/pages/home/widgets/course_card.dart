@@ -20,7 +20,7 @@ class CourseCard extends StatelessWidget {
       width: 260,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.all(Radius.circular(30)),
+        borderRadius: const BorderRadius.all(Radius.circular(30)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
