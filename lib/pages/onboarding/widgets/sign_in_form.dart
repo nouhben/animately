@@ -93,88 +93,90 @@ class _SignInFormState extends State<SignInForm> {
       children: [
         Form(
           key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                "Email",
-                style: TextStyle(
-                  color: Colors.black54,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8, bottom: 16),
-                child: TextFormField(
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "";
-                    }
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: SvgPicture.asset("assets/icons/email.svg"),
-                    ),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Email",
+                  style: TextStyle(
+                    color: Colors.black54,
                   ),
                 ),
-              ),
-              const Text(
-                "Password",
-                style: TextStyle(
-                  color: Colors.black54,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8, bottom: 16),
-                child: TextFormField(
-                  obscureText: true,
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "";
-                    }
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: SvgPicture.asset("assets/icons/password.svg"),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8, bottom: 24),
-                child: ElevatedButton.icon(
-                  onPressed: () {
-                    singIn(context);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFF77D8E),
-                    minimumSize: const Size(double.infinity, 56),
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(25),
-                        bottomRight: Radius.circular(25),
-                        bottomLeft: Radius.circular(25),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 16),
+                  child: TextFormField(
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return "";
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: SvgPicture.asset("assets/icons/email.svg"),
                       ),
                     ),
                   ),
-                  icon: const Icon(
-                    CupertinoIcons.arrow_right,
-                    color: Color(0xFFFE0037),
-                  ),
-                  label: const Text("Sign In"),
                 ),
-              ),
-            ],
+                const Text(
+                  "Password",
+                  style: TextStyle(
+                    color: Colors.black54,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 16),
+                  child: TextFormField(
+                    obscureText: true,
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return "";
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: SvgPicture.asset("assets/icons/password.svg"),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 24),
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      singIn(context);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFF77D8E),
+                      minimumSize: const Size(double.infinity, 56),
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(25),
+                          bottomRight: Radius.circular(25),
+                          bottomLeft: Radius.circular(25),
+                        ),
+                      ),
+                    ),
+                    icon: const Icon(
+                      CupertinoIcons.arrow_right,
+                      color: Color(0xFFFE0037),
+                    ),
+                    label: const Text("Sign In"),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         isShowLoading
             ? CustomPositioned(
                 child: RiveAnimation.asset(
-                  'assets/RiveAssets/check.riv',
+                  'assets/animated/check.riv',
                   fit: BoxFit.cover,
                   onInit: _onCheckRiveInit,
                 ),
@@ -184,7 +186,7 @@ class _SignInFormState extends State<SignInForm> {
             ? CustomPositioned(
                 scale: 6,
                 child: RiveAnimation.asset(
-                  "assets/RiveAssets/confetti.riv",
+                  "assets/animated/confetti.riv",
                   onInit: _onConfettiRiveInit,
                   fit: BoxFit.cover,
                 ),

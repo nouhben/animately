@@ -30,6 +30,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Stack(
         children: [
           Positioned(
